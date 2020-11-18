@@ -48,7 +48,6 @@ it('renders 5 rows', () => {
 it('filters rows based on input', () => {
   const wrapper = mount(<App rows={rows} locale="da" rowsPerPage={5} />);
 
-  wrapper.find('input').simulate('change', { target: { value: 'k' } });
-
+  wrapper.find('input').simulate('change', { target: { value: 'K' } });
   expect(wrapper.find('tr').length).toBe(2);
 });
