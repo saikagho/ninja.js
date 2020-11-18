@@ -14,14 +14,7 @@ const Pagination = ({ currentPageNumber, totalNumberOfPages, onChange }) => {
           onChange={onChange} />
       })
 
-  if (pages.length <= 1) {
-    return null
-  }
-  return(
-    <ul className="pagination">
-      {pages}
-    </ul>
-  )
+  return <div>{pages.length <=1 ? null : <ul className="pagination">{pages}</ul>}</div>
 }
 
 export default Pagination
